@@ -1,0 +1,16 @@
+version: "2"
+services:
+  arctic:
+    build:
+      context: .
+      args:
+        COIND: ${COIND}
+        PORTP2P: ${PORTP2P}
+        REPO: ${REPO}
+    image: ${IMAGE}
+    ports:
+      - "${PORTP2P}:${PORTP2P}"
+    volumes:
+      - ./${COINDIR}:/root/${COINDIR}
+      - ./${COINCONF}:/root/${COINDIR}/${COINCONF}
+
