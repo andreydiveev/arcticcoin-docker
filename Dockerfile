@@ -53,7 +53,7 @@ RUN apk --no-cache add libevent-dev
 RUN apk --no-cache add openssl
 RUN apk --no-cache add db-dev
 
-COPY --from=0 /usr/lib/libboost_chrono-mt.so.1.62.0 /usr/lib/libboost_chrono-mt.so.1.62.0
+COPY --from=0 /usr/lib/libboost_chrono-mt.so.1.62.0 /usr/lib/
 
 ARG COIND
 ARG PORTP2P
